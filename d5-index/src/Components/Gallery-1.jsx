@@ -16,7 +16,7 @@ class Gallery extends Component {
 
     fetchMovies = async () => {
         try {
-            const url = "http://www.omdbapi.com/?apikey=5246caa7&s=harry%20potter"
+            const url = `http://www.omdbapi.com/?apikey=5246caa7&s=${this.props.name}`
 
             const response = await fetch(url)
 
@@ -39,7 +39,7 @@ class Gallery extends Component {
     render() {
         return (
             <div>
-                <h3 className="heading">Harry Potter Gallery</h3>
+                <h3 className="heading">{this.props.title} Gallery</h3>
                 <Container>
                     <Row>
 
