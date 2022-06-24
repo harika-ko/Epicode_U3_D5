@@ -5,6 +5,7 @@ import Gallery from './Components/Gallery-1';
 import Gallery_2 from './Components/Gallery-2';
 import Gallery_3 from './Components/Gallery-3';
 import Gallery_4 from './Components/Gallery-4';
+import ProfilePage from './Components/ProfilePage';
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
         <Gallery_2 />
         <Gallery_3 />
         <Gallery_4 />
+        <br></br><br></br><br></br>
+        <ProfilePage />
       </header>
     </div>
   );
