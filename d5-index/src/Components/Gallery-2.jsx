@@ -1,12 +1,12 @@
 import { Component } from "react";
-import { Card, Container, Row, Col, Spinner, Alert } from "react-bootstrap"
+import { Card, Container, Row, Col, Spinner } from "react-bootstrap"
 
-class Gallery extends Component {
+
+class Gallery_2 extends Component {
 
     state = {
         movies: [],
         isLoading: true,
-        errMessage: "",
     }
 
     componentDidMount = () => {
@@ -16,7 +16,7 @@ class Gallery extends Component {
 
     fetchMovies = async () => {
         try {
-            const url = "http://www.omdbapi.com/?apikey=5246caa7&s=harry%20potter"
+            const url = "http://www.omdbapi.com/?apikey=5246caa7&s=Lord%20of%20the%20Rings"
 
             const response = await fetch(url)
 
@@ -29,21 +29,18 @@ class Gallery extends Component {
                     }
                 )
             } else {
-                const message = await response.text()
-                this.setState({ ...this.state, isLoading: false, errMessage: message })
+                alert("Something wrong with API")
             }
         } catch (error) {
-            this.setState({ ...this.state, isLoading: false, errMessage: "Error Occured" })
+            console.log(error)
         }
     }
     render() {
         return (
             <div>
-                <h3 className="heading">Harry Potter Gallery</h3>
+                <h3 className="heading">Lord of Rings Gallery</h3>
                 <Container>
                     <Row>
-
-                        {this.state.errMessage && <Alert variant="danger">{this.state.errMessage}</Alert>}
 
                         {this.state.isLoading && (
                             <Spinner animation="grow" />
@@ -64,4 +61,4 @@ class Gallery extends Component {
 }
 
 
-export default Gallery
+export default Gallery_2

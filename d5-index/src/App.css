@@ -1,8 +1,20 @@
-.App-Header {
-  background-color: grey;
+.App {
+  background-color: #141414;
+  color: white;
 }
 
 .logo {
   height: 50px;
   width: 50px;
+}
+
+.heading {
+  margin-left: 1rem;
+  margin-top: 1rem;
+  text-shadow: 2px 2px rgb(128, 127, 127);
+}
+
+.Cards:hover {
+  box-shadow: 0 0 4px 2px rgb(128, 127, 127);
+  right: 0.3rem;
 }
